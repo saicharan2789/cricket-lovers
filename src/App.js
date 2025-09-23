@@ -124,8 +124,9 @@ function App() {
                 height="140"
                 image={images[i % images.length]} // cycles through 5 images
                 alt={player}
+                backgroundColor="#4e0505ff"
               />
-      <CardContent>
+      <CardContent style={{ backgroundColor: "orange" }}  >
         <Typography gutterBottom variant="h5" component="div">
           {player}
         </Typography>
