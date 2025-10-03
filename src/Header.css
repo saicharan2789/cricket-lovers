@@ -1,0 +1,36 @@
+.app-header {
+    background-color: #333; /* Dark background */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; /* Puts h1 on the left, nav on the right */
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.app-header nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes links horizontal */
+}
+
+.app-header nav ul li {
+    margin-left: 25px; /* Spacing between links */
+}
+
+.app-header nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.app-header nav ul li a:hover {
+    color: #ff9900; /* Highlight color on hover */
+}

@@ -7,6 +7,8 @@ import img5 from "./assets/steve.png";
 
 
 import { Card, CardContent, CardMedia, Typography, CardActions, Button } from '@mui/material';
+import Header from "./Header";
+import Footer from "./Footer";
 // ✅ Local mock data
 const players = ["Virat Kohli", "MS Dhoni", "Sachin Tendulkar", "Ben Stokes", "Steve Smith"];
 
@@ -83,18 +85,34 @@ function App() {
           background:
             "linear-gradient(-45deg, #270f25ff, #203a43, #4e585cff, #1c1c1c)",
           backgroundSize: "400% 400%",
-          backgroundImage: "url('https://www.transparenttextures.com/patterns/asfalt-light.png'), linear-gradient(-45deg, #270f25ff, #203a43, #4e585cff, #1c1c1c)",
+          backgroundImage:
+            "url('https://www.transparenttextures.com/patterns/asfalt-light.png'), linear-gradient(-45deg, #270f25ff, #203a43, #4e585cff, #1c1c1c)",
           animation: "gradientBG 15s ease infinite",
           zIndex: -1,
         }}
       ></div>
 
+      <Header />
+
       {/* Main content */}
       <div style={{ flex: 3, paddingRight: "20px" }}>
-        <h1 style={{ fontSize: "36px", marginBottom: "10px" , textAlign: "center" }}>
+        <h1
+          style={{
+            fontSize: "36px",
+            marginBottom: "10px",
+            textAlign: "center",
+          }}
+        >
           🏏 Cricket Lovers Hub
         </h1>
-        <p style={{ fontStyle: "italic", fontSize: "16px", color: "#ccc", textAlign: "center" }}>
+        <p
+          style={{
+            fontStyle: "italic",
+            fontSize: "16px",
+            color: "#ccc",
+            textAlign: "center",
+          }}
+        >
           Where cricket passion meets fun facts!
         </p>
 
@@ -102,7 +120,13 @@ function App() {
         <img
           src="https://media.giphy.com/media/26oqUoUe23WPHnlvOP/giphy.gif"
           alt="Cricket Animation"
-          style={{ width: "600px", margin: "20px auto", borderRadius: "20px",alignItems: "center", display: "block" }}
+          style={{
+            width: "1000px",
+            margin: "20px auto",
+            borderRadius: "20px",
+            alignItems: "center",
+            display: "block",
+          }}
         />
 
         {/* Players */}
@@ -118,29 +142,43 @@ function App() {
                 backdropFilter: "blur(6px)",
               }}
             >
-               <Card sx={{ maxWidth: 345 }}>
-       <CardMedia
-                component="img"
-                height="140"
-                image={images[i % images.length]} // cycles through 5 images
-                alt={player}
-                backgroundColor="#4e0505ff"
-              />
-      <CardContent style={{ backgroundColor: "orange" }}  >
-        <Typography gutterBottom variant="h5" component="div">
-          {player}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          This is a brief description about {player}. A legendary cricketer known for exceptional skills and sportsmanship.
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+              <Card sx={{ maxWidth: 345 }}>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={images[i % images.length]} // cycles through 5 images
+                  alt={player}
+                  backgroundColor="#4e0505ff"
+                />
+                <CardContent style={{ backgroundColor: "orange" }}>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {player}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    This is a brief description about {player}. A legendary
+                    cricketer known for exceptional skills and sportsmanship.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Share</Button>
+                  <Button size="small">Learn More</Button>
+                </CardActions>
+              </Card>
               {player}
-              <a href={`https://www.google.com/search?q=${encodeURIComponent(player)}`} target="_blank" rel="noopener noreferrer" style={{ marginLeft: "8px", textDecoration: "none", color: "#00f" }}>🔍</a>
+              <a
+                href={`https://www.google.com/search?q=${encodeURIComponent(
+                  player
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginLeft: "8px",
+                  textDecoration: "none",
+                  color: "#00f",
+                }}
+              >
+                🔍
+              </a>
             </div>
           ))}
         </div>
@@ -238,8 +276,7 @@ function App() {
         </div>
       </div>
 
-     {/* Example Card for a player */}
-   
+      {/* Example Card for a player */}
 
       {/* Animations */}
       <style>
@@ -256,6 +293,7 @@ function App() {
           }
         `}
       </style>
+      <Footer />
     </div>
   );
 }
